@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /* @var $block \Magento\Catalog\Block\Product\View\AbstractView */?>
+<?php 
+
+$_product = $block->getProduct();
+$_isAvailable = $_product->isAvailable();
+
+if ($block->displayProductStockStatus()): ?>
+    <div class="<?php echo $this->getCssClass() ?> stock <?php echo !$_isAvailable ? 'un' : '' ?>available" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+        <span class="status">Status</span>
+        <span><?php /* @escapeNotVerified */ echo __(($_isAvailable ? 'In' : 'Out of').' stock') ?></span>
+    </div>
+<?php endif; ?>

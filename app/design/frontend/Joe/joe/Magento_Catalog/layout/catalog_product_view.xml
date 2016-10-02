@@ -11,11 +11,15 @@
 		<move element="product.info.review" destination="product.info.main" after="product.info.price"/>
 		<referenceBlock name="product.info.sku">
 			<arguments>
-				<!-- Modified block argument -->
-				<argument name="css_class" xsi:type="string">joe-class</argument>
-				<!-- Newly added block argument -->
-				<argument name="custom_label" xsi:type="string">Custom Block Label</argument>
+				<argument name="css_class" xsi:type="string">joe-sku</argument>
 			</arguments>
-		</referenceBlock> 
+		</referenceBlock>
+		<referenceBlock name="product.info.options.default">
+			<block class="Magento\Catalog\Block\Product\View\Options\Type\DefaultType" as="default" template="product/view/options/type/default.phtml">
+				<arguments>
+					<argument name="css_class" xsi:type="string">joe-stock</argument>
+				</arguments>
+			</block>
+		</referenceBlock>
 	</body>
 </page>

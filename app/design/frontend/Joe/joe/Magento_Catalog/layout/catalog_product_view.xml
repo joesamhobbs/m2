@@ -14,12 +14,5 @@
 				<argument name="css_class" xsi:type="string">joe-sku</argument>
 			</arguments>
 		</referenceBlock>
-		<referenceBlock name="product.info.options.default">
-			<block class="Magento\Catalog\Block\Product\View\Options\Type\DefaultType" as="default" template="product/view/options/type/default.phtml">
-				<arguments>
-					<argument name="css_class" xsi:type="string">joe-stock</argument>
-				</arguments>
-			</block>
-		</referenceBlock>
 	</body>
 </page>

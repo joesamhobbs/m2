@@ -1,12 +1,36 @@
+.pa {
+	display:inline-block;
+	padding:.5em 1em;
+}
+.pav {
+	width:5em;
+	text-align: left;
+}
+
 .joe-sku {
 	border:1px dashed @color-orange-red2;
 	display:inline-block;
 	.type,
 	.value {
-		display:inline-block;
-		padding:.5em 1em;
+		&:extend(.pa);
 	}
 	.type {
 		background:@color-yellow-light2
+	}
+	.value {
+		&:extend(.pav);
+	}
+}
+
+.stock {
+	.label,
+	.status {
+		&:extend(.pa);
+	}
+	.label {
+		background: @color-red9
+	}
+	.status {
+		&:extend(.pav);
 	}
 }

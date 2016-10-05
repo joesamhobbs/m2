@@ -14,8 +14,8 @@ $_product = $block->getProduct();
 $_isAvailable = $_product->isAvailable();
 
 if ($block->displayProductStockStatus()): ?>
-    <div class="<?php echo $this->getCssClass() ?> stock <?php echo !$_isAvailable ? 'un' : '' ?>available" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
-        <span class="status">Status</span>
-        <span><?php /* @escapeNotVerified */ echo __(($_isAvailable ? 'In' : 'Out of').' stock') ?></span>
+    <div class="stock <?php echo !$_isAvailable ? 'un' : '' ?>available" title="<?php /* @escapeNotVerified */ echo __('Availability') ?>">
+        <span class="label">Status</span>
+        <span class="status"><?php /* @escapeNotVerified */ echo __(($_isAvailable ? 'In' : 'Out of').' stock') ?></span>
     </div>
 <?php endif; ?>
